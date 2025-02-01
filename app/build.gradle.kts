@@ -1,21 +1,21 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    kotlin("kapt") // Habilitando o KAPT
+    id("com.google.dagger.hilt.android")
+    kotlin("kapt")
 }
 
 android {
     namespace = "com.henriquemachine.lightningmonitornetwork"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.henriquemachine.lightningmonitornetwork"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary = true
         }
@@ -23,7 +23,7 @@ android {
         buildConfigField(
             "String",
             "API_URL",
-            "\"https://mempool.space/api/v1/lightning/nodes/rankings/connectivity\""
+            "\"https://mempool.space/api/\""
         )
     }
 
@@ -34,11 +34,6 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            buildConfigField(
-                "String",
-                "API_URL",
-                "\"https://mempool.space/api/v1/lightning/nodes/rankings/connectivity\""
-            )
         }
 
         debug {
@@ -46,11 +41,6 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
-            )
-            buildConfigField(
-                "String",
-                "API_URL",
-                "\"https://dev.mempool.space/api/v1/lightning/nodes/rankings/connectivity\""
             )
         }
     }
@@ -66,10 +56,11 @@ android {
 
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.0"
     }
 
     packaging {
@@ -89,14 +80,17 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.foundation)
 
     // Retrofit
     implementation(libs.retrofit)
     implementation(libs.converter.moshi)
 
-    // Hilt
-    implementation(libs.androidx.hilt.navigation.compose)
+    // Hilt dependencies
     implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose.v120)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     kapt(libs.hilt.compiler)
 
     // Moshi
@@ -114,10 +108,17 @@ dependencies {
 
     // Test
     testImplementation(libs.junit)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.mockito.kotlin)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.ui.test.junit4)
+    androidTestImplementation(libs.mockito.android)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+kapt {
+    correctErrorTypes = true
 }
