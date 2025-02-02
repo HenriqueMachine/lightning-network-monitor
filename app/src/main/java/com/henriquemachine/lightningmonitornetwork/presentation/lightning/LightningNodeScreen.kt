@@ -54,7 +54,7 @@ fun LightningNodeScreen(
                     is LightningNodeViewEffect.RefreshComplete -> {
                         Toast.makeText(
                             context,
-                            context.getString(R.string.new_batch_loaded), Toast.LENGTH_SHORT
+                            context.getString(R.string.newBatchLoaded), Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
@@ -80,7 +80,7 @@ fun LightningNodeScreen(
         }
 
         is LightningNodeViewState.Empty -> {
-            ErrorView(message = stringResource(R.string.no_nodes_found))
+            ErrorView(message = stringResource(R.string.noNodesFound))
         }
     }
 
@@ -141,12 +141,12 @@ fun ShowNodeDialog(
         },
         text = {
             Column {
-                Text(stringResource(id = R.string.public_key, node.publicKey))
+                Text(stringResource(id = R.string.publicKey, node.publicKey))
                 Text(stringResource(id = R.string.channels, node.channels))
                 Text(stringResource(id = R.string.capacity, node.capacityBtc.toBtc()))
                 Text(stringResource(id = R.string.location, node.city, node.country))
-                Text(stringResource(id = R.string.first_seen, node.firstSeen.formatUnixDate()))
-                Text(stringResource(id = R.string.updated_at, node.updatedAt.formatUnixDate()))
+                Text(stringResource(id = R.string.firstSeen, node.firstSeen.formatUnixDate()))
+                Text(stringResource(id = R.string.updatedAt, node.updatedAt.formatUnixDate()))
             }
         },
         confirmButton = {
