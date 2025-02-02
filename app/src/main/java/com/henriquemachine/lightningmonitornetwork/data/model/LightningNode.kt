@@ -12,9 +12,9 @@ import java.util.Locale
  * alias, number of channels, capacity, and location details.
  *
  * @property publicKey The public key of the node.
- * @property alias The alias of the node, if available. Can be `null`.
+ * @property alias The alias of the node if available. Can be `null`.
  * @property channels The number of open channels the node has.
- * @property capacity The total capacity of the node (in satoshis).
+ * @property capacity The total capacity of the node (in Satoshis).
  * @property firstSeen Unix timestamp representing when the node was first detected.
  * @property updatedAt Unix timestamp of the last update of the node.
  * @property city A map containing city information in different languages (e.g., "pt-BR", "en").

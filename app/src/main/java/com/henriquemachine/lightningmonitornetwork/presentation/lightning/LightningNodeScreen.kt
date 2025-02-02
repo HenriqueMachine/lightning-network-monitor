@@ -17,6 +17,14 @@ import com.henriquemachine.lightningmonitornetwork.data.model.LightningNodeViewO
 import com.henriquemachine.lightningmonitornetwork.utils.ext.toBtc
 import com.henriquemachine.lightningmonitornetwork.utils.ext.formatUnixDate
 
+/**
+ * Composable function for displaying the Lightning Node screen.
+ *
+ * This screen fetches and displays a list of Lightning Network nodes using a grid layout.
+ * It supports pull-to-refresh functionality and shows details of a selected node in a dialog.
+ *
+ * @param viewModel The ViewModel that handles fetching and managing the Lightning nodes.
+ */
 @Composable
 fun LightningNodeScreen(
     viewModel: LightningNodeViewModel = hiltViewModel()
@@ -76,6 +84,14 @@ fun LightningNodeScreen(
     }
 }
 
+/**
+ * Displays a pull-to-refresh grid of Lightning nodes.
+ *
+ * @param nodes List of Lightning nodes to display.
+ * @param isRefreshing Indicates whether data is being refreshed.
+ * @param onRefresh Callback triggered when the user pulls to refresh.
+ * @param onNodeSelected Callback triggered when a node is selected.
+ */
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun PullToRefreshNodesGrid(
@@ -102,6 +118,12 @@ fun PullToRefreshNodesGrid(
     }
 }
 
+/**
+ * Displays a dialog with detailed information about a selected Lightning node.
+ *
+ * @param node The selected Lightning node.
+ * @param onDismiss Callback triggered when the dialog is dismissed.
+ */
 @Composable
 fun ShowNodeDialog(
     node: LightningNodeViewObject,
@@ -130,6 +152,9 @@ fun ShowNodeDialog(
     )
 }
 
+/**
+ * Displays a loading indicator while data is being fetched.
+ */
 @Composable
 fun LoadingView() {
     Box(modifier = Modifier.fillMaxSize()) {
@@ -140,6 +165,12 @@ fun LoadingView() {
     }
 }
 
+/**
+ * Displays an individual Lightning node as a card.
+ *
+ * @param node The Lightning node to display.
+ * @param onNodeSelected Callback triggered when the node is clicked.
+ */
 @Composable
 fun NodeItemView(
     node: LightningNodeViewObject,
@@ -167,6 +198,11 @@ fun NodeItemView(
     }
 }
 
+/**
+ * Displays an error message when something goes wrong.
+ *
+ * @param message The error message to display.
+ */
 @Composable
 fun ErrorView(message: String) {
     Column(
