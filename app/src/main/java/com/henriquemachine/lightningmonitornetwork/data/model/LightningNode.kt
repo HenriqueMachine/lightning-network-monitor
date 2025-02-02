@@ -15,6 +15,7 @@ data class LightningNode(
     @Json(name = "city") val city: Map<String, String>?,
     @Json(name = "country") val country: Map<String, String>?
 ) {
+
     fun toViewObject(): LightningNodeViewObject {
         return LightningNodeViewObject(
             publicKey = publicKey,
@@ -23,9 +24,13 @@ data class LightningNode(
             capacityBtc = capacity / 100_000_000.0,
             firstSeen = firstSeen.toFormattedDate(),
             updatedAt = updatedAt.toFormattedDate(),
-            city = city?.get("pt-BR") ?: city?.get("en") ?: "Unknown",
-            country = country?.get("pt-BR") ?: country?.get("en") ?: "Unknown"
+            city = city.getLocalizedValue(),
+            country = country.getLocalizedValue()
         )
+    }
+
+    private fun Map<String, String>?.getLocalizedValue(): String {
+        return this?.get("pt-BR") ?: this?.get("en") ?: "Unknown"
     }
 }
 

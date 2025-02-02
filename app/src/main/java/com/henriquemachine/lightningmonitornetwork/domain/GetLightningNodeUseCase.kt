@@ -5,7 +5,7 @@ import com.henriquemachine.lightningmonitornetwork.data.repository.LightningRepo
 import com.henriquemachine.lightningmonitornetwork.utils.Result
 import javax.inject.Inject
 
-open class GetLightningNodesUseCase @Inject constructor(
+class GetLightningNodesUseCase @Inject constructor(
     private val repository: LightningRepository
 ) {
     suspend fun getNodes(): Result<List<LightningNodeViewObject>> {
