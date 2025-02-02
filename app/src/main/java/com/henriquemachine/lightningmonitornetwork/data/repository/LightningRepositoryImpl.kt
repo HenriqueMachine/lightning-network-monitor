@@ -7,7 +7,7 @@ import retrofit2.HttpException
 import java.io.IOException
 import timber.log.Timber
 
-class NodeRepositoryImpl(
+class LightningRepositoryImpl(
     private val lightningApi: LightningApi
 ) : LightningRepository {
 
