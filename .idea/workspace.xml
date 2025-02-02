@@ -9,12 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e47918-7252-4b88-8706-d02ab482ec9e" name="Changes" comment="adding leakcanary lib">
+    <list default="true" id="60e47918-7252-4b88-8706-d02ab482ec9e" name="Changes" comment="adding doc">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/model/LightningNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/model/LightningNode.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/model/LightningNodeViewObject.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/model/LightningNodeViewObject.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/repository/LightningRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/repository/LightningRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/presentation/lightning/LightningNodeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/presentation/lightning/LightningNodeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -433,7 +436,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738535304862</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="adding doc">
+      <option name="closed" value="true" />
+      <created>1738536381910</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1738536381910</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -451,6 +462,7 @@
     <MESSAGE value="improving DTO" />
     <MESSAGE value="applying ktlint on project and create viewmodel, model doc" />
     <MESSAGE value="adding leakcanary lib" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding leakcanary lib" />
+    <MESSAGE value="adding doc" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding doc" />
   </component>
 </project>

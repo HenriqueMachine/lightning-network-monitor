@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Lightning Monitor Network</string>
+
+    <string name="new_batch_loaded">New batch loaded</string>
+    <string name="no_nodes_found">No nodes found</string>
+    <string name="error_message">Error: %1$s</string>
+    <string name="public_key">Public Key: %1$s</string>
+    <string name="channels">Channels: %1$d</string>
+    <string name="capacity">Capacity: %1$s BTC</string>
+    <string name="location">Location: %1$s, %2$s</string>
+    <string name="first_seen">First Seen: %1$s</string>
+    <string name="updated_at">Updated At: %1$s</string>
+    <string name="close">Close</string>
+    <string name="loading">Loading...</string>
+
 </resources>

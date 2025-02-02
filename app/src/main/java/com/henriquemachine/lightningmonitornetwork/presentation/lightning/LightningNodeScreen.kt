@@ -11,8 +11,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.henriquemachine.lightningmonitornetwork.R
 import com.henriquemachine.lightningmonitornetwork.data.model.LightningNodeViewObject
 import com.henriquemachine.lightningmonitornetwork.utils.ext.toBtc
 import com.henriquemachine.lightningmonitornetwork.utils.ext.formatUnixDate
@@ -50,7 +52,10 @@ fun LightningNodeScreen(
                     }
 
                     is LightningNodeViewEffect.RefreshComplete -> {
-                        Toast.makeText(context, "New batch loaded", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(
+                            context,
+                            context.getString(R.string.new_batch_loaded), Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
             }
@@ -75,7 +80,7 @@ fun LightningNodeScreen(
         }
 
         is LightningNodeViewState.Empty -> {
-            ErrorView(message = "No nodes found")
+            ErrorView(message = stringResource(R.string.no_nodes_found))
         }
     }
 
@@ -136,12 +141,12 @@ fun ShowNodeDialog(
         },
         text = {
             Column {
-                Text("Public Key: ${node.publicKey}")
-                Text("Channels: ${node.channels}")
-                Text("Capacity: ${node.capacityBtc.toBtc()} BTC")
-                Text("Location: ${node.city}, ${node.country}")
-                Text("First Seen: ${node.firstSeen.formatUnixDate()}")
-                Text("Updated At: ${node.updatedAt.formatUnixDate()}")
+                Text(stringResource(id = R.string.public_key, node.publicKey))
+                Text(stringResource(id = R.string.channels, node.channels))
+                Text(stringResource(id = R.string.capacity, node.capacityBtc.toBtc()))
+                Text(stringResource(id = R.string.location, node.city, node.country))
+                Text(stringResource(id = R.string.first_seen, node.firstSeen.formatUnixDate()))
+                Text(stringResource(id = R.string.updated_at, node.updatedAt.formatUnixDate()))
             }
         },
         confirmButton = {
