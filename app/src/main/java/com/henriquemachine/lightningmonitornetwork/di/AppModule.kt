@@ -3,7 +3,7 @@ package com.henriquemachine.lightningmonitornetwork.di
 import com.henriquemachine.lightningmonitornetwork.BuildConfig
 import com.henriquemachine.lightningmonitornetwork.data.api.LightningApi
 import com.henriquemachine.lightningmonitornetwork.data.repository.LightningRepository
-import com.henriquemachine.lightningmonitornetwork.data.repository.NodeRepositoryImpl
+import com.henriquemachine.lightningmonitornetwork.data.repository.LightningRepositoryImpl
 import com.henriquemachine.lightningmonitornetwork.domain.GetLightningNodesUseCase
 import dagger.Module
 import dagger.Provides
@@ -41,7 +41,7 @@ object AppModule {
     @Provides
     @Singleton
     fun provideNodeRepository(apiService: LightningApi): LightningRepository {
-        return NodeRepositoryImpl(apiService)
+        return LightningRepositoryImpl(apiService)
     }
 
     @Provides
