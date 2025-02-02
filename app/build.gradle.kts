@@ -20,11 +20,8 @@ android {
             useSupportLibrary = true
         }
 
-        buildConfigField(
-            "String",
-            "API_URL",
-            "\"https://mempool.space/api/\""
-        )
+        buildConfigField("String", "API_URL", "\"https://mempool.space/api/\"")
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -91,6 +88,7 @@ dependencies {
     implementation(libs.hilt.android)
     implementation(libs.androidx.hilt.navigation.compose.v120)
     implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.junit.ktx)
     kapt(libs.hilt.compiler)
 
     // Moshi
@@ -117,6 +115,16 @@ dependencies {
     androidTestImplementation(libs.mockito.android)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    testImplementation ("com.google.dagger:hilt-android-testing:2.43.2")
+
+    // Dependências para testes de UI (se necessário, mas não obrigatório)
+    testImplementation ("androidx.arch.core:core-testing:2.1.0")
+
+    // Testes com coroutines e Hilt
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:4.1.0")
+
+    // Para usar o Hilt em testes
+    testImplementation ("com.google.dagger:hilt-android-testing:2.43.2")
 }
 
 kapt {

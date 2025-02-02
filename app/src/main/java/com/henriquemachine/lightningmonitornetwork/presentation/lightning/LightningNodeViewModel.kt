@@ -33,13 +33,13 @@ class LightningNodeViewModel @Inject constructor(
 
     private fun loadLightningNodes() {
         performFetchNodesOperation {
-            return@performFetchNodesOperation getLightningNodesUseCase.execute()
+            return@performFetchNodesOperation getLightningNodesUseCase.getNodes()
         }
     }
 
     private fun refreshLightningNodes() {
         performFetchNodesOperation {
-            val result = getLightningNodesUseCase.execute()
+            val result = getLightningNodesUseCase.getNodes()
             _viewEffect.emit(LightningNodeViewEffect.RefreshComplete)
             return@performFetchNodesOperation result
         }
