@@ -11,7 +11,6 @@ class LightningNodeViewStateTest {
     fun `test loading state`() {
         val loadingState = LightningNodeViewState.Loading
 
-        // Verifica se o estado é igual ao esperado (sem parâmetros adicionais)
         assertEquals(LightningNodeViewState.Loading, loadingState)
     }
 
@@ -19,7 +18,6 @@ class LightningNodeViewStateTest {
     fun `test empty state`() {
         val emptyState = LightningNodeViewState.Empty
 
-        // Verifica se o estado é igual ao esperado (sem parâmetros adicionais)
         assertEquals(LightningNodeViewState.Empty, emptyState)
     }
 
@@ -39,7 +37,6 @@ class LightningNodeViewStateTest {
         )
         val successState = LightningNodeViewState.Success(nodes = mockNodes)
 
-        // Verifica se o estado é do tipo Success e se os valores estão corretos
         assertEquals(LightningNodeViewState.Success(nodes = mockNodes), successState)
     }
 
@@ -63,7 +60,6 @@ class LightningNodeViewStateTest {
             error = "An error occurred"
         )
 
-        // Verifica se o estado é do tipo Success, e se isLoading e error estão corretos
         assertEquals(
             LightningNodeViewState.Success(
                 nodes = mockNodes,
@@ -78,7 +74,6 @@ class LightningNodeViewStateTest {
         val errorMessage = "An error occurred"
         val errorState = LightningNodeViewState.Error(message = errorMessage)
 
-        // Verifica se o estado é do tipo Error e se a mensagem está correta
         assertEquals(LightningNodeViewState.Error(message = errorMessage), errorState)
     }
 }
