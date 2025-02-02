@@ -149,7 +149,7 @@ fun NodeItemView(
         modifier = Modifier
             .padding(8.dp)
             .clickable { onNodeSelected(node) },
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp)
+        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
             Text(

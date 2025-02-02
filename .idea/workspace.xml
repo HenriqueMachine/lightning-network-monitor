@@ -9,16 +9,23 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60e47918-7252-4b88-8706-d02ab482ec9e" name="Changes" comment="creating view effect tests">
+    <list default="true" id="60e47918-7252-4b88-8706-d02ab482ec9e" name="Changes" comment="improving DTO">
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.4/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/domain/GetLightningNodeUseCase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/domain/GetLightningNodeUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/model/LightningNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/data/model/LightningNode.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/presentation/lightning/LightningNodeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/presentation/lightning/LightningNodeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/presentation/lightning/LightningNodeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/henriquemachine/lightningmonitornetwork/presentation/lightning/LightningNodeViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +101,7 @@
       <recent name="com.henriquemachine.lightningmonitornetwork" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LightningNodeViewModelTest">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="Lightning_Monitor_Network.app.main" />
       <option name="DEPLOY" value="true" />
@@ -402,7 +409,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738465143892</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="improving DTO">
+      <option name="closed" value="true" />
+      <created>1738466255972</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1738466255972</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -417,6 +432,7 @@
     <MESSAGE value="rename repository impl" />
     <MESSAGE value="creating view state tests" />
     <MESSAGE value="creating view effect tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="creating view effect tests" />
+    <MESSAGE value="improving DTO" />
+    <option name="LAST_COMMIT_MESSAGE" value="improving DTO" />
   </component>
 </project>
